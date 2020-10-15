@@ -24,42 +24,42 @@ class Fcm
         $this->serverKey = $serverKey;
     }
 
-    public function to(array $recipients)
+    public function to($recipients)
     {
         $this->recipients = $recipients;
 
         return $this;
     }
 
-    public function toTopic(string $topic)
+    public function toTopic($topic)
     {
         $this->topic = $topic;
 
         return $this;
     }
 
-    public function data(array $data = [])
+    public function data($data = [])
     {
         $this->data = $data;
 
         return $this;
     }
 
-    public function notification(array $notification = [])
+    public function notification($notification = [])
     {
         $this->notification = $notification;
 
         return $this;
     }
 
-    public function priority(string $priority)
+    public function priority($priority)
     {
         $this->priority = $priority;
 
         return $this;
     }
 
-    public function timeToLive(int $timeToLive)
+    public function timeToLive($timeToLive)
     {
         if ($timeToLive < 0) {
             $timeToLive = 0; // (0 seconds)
